@@ -1,0 +1,195 @@
+﻿@using FinPortal.ViewModels
+@model FinPortal.ViewModels.UserInfoViewModel
+@{
+
+    ViewBag.Title = "Home Page";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>FPE</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+    <link href="~/Content/material-kit.css" rel="stylesheet" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+</head>
+<body class="landing-page sidebar-collapse">
+
+    <nav class="navbar navbar-color-on-scroll navbar-transparent fixed-top navbar-expand-lg" color-on-scroll="100">
+        <div class="container">
+            <div class="navbar-translate">
+                <a class="navbar-brand" href="#">
+                    FPE
+                </a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">
+                            <i class="material-icons">apps</i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="page-header header-filter" data-parallax="true" style="background-image: url('../Images/bg3.jpg')">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 ml-auto mr-auto">
+                    <div class="brand text-center">
+                        <h1>Welcome to FinPortal EXPRESS</h1>
+                        <h3 class="title text-center">Managing Income and Expenses since 2019</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="main main-raised">
+        <div class="container">
+            <div class="section section-tabs">
+                <div class="container">
+                    <!--                nav tabs	             -->
+                    <div id="nav-tabs">
+                        <h3><b>What can we do for you today?</b></h3>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h3>
+                                    <small>Are you logging in?</small>
+                                </h3>
+                                <!-- Tabs with icons on Card -->
+                                <div class="card card-nav-tabs">
+                                    <div class="card-header card-header-info">
+                                        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                        <div class="nav-tabs-navigation">
+                                            <div class="nav-tabs-wrapper">
+                                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active">
+                                                            <i class="material-icons">face</i> Returning Member(s)
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="tab-content text-center">
+                                            <div class="tab-pane active" id="profile">
+                                                <p><u><b>Once logged in you be able to do the following:</b></u></p>
+                                                <br />
+                                                <div class="text-left">
+                                                    <p><i class="material-icons">star</i>Manage Members of your Household</p>
+                                                    <p><i class="material-icons">star</i>Create Invitations for new members of the family!</p>
+                                                    <p><i class="material-icons">star</i>Manage your personal Bank Accounts, Budgets, and Transactions</p>
+                                                </div>
+                                                <button type="button" class="btn btn-warning btn-fab-mini" data-toggle="modal" data-target="#LogModal">Sign in!</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Tabs with icons on Card -->
+                            </div>
+                            <div class="col-md-6">
+                                <h3>
+                                    <small>Or would you like to register?</small>
+                                </h3>
+                                <!-- Tabs with icons on Card -->
+                                <div class="card card-nav-tabs">
+                                    <div class="card-header card-header-success">
+                                        <!-- colors: "header-primary", "header-info", "header-success", "header-warning", "header-danger" -->
+                                        <div class="nav-tabs-navigation">
+                                            <div class="nav-tabs-wrapper">
+                                                <ul class="nav nav-tabs" data-tabs="tabs">
+                                                    <li class="nav-item">
+                                                        <a class="nav-link active">
+                                                            <i class="material-icons">face</i> Registration
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body ">
+                                        <div class="tab-content text-center">
+                                            <div class="tab-pane active" id="profile">
+                                                <p>Once you are a registered guest you will be guided to the lobby where you can either create or join an existing household. Click the button below to start the process!</p>
+                                                <button type="button" class=" btn btn-warning btn-fab-mini" data-toggle="modal" data-target="#RegisModal">Sign me up!</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Tabs with icons on Card -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer footer-default">
+        <div class="container">
+            <div class="copyright float-right">
+                &copy;
+                <b>
+                    <script>document.write(new Date().getFullYear())</script> Customized by Gregorio Zambrana
+                </b>
+            </div>
+        </div>
+    </footer>
+
+    @*Scripts*@
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/popper.min.js"></script>
+    <script src="~/Scripts/bootstrap-material-design.min.js"></script>
+    <script src="~/Scripts/moment.min.js"></script>
+    <script src="~/Scripts/bootstrap-datetimepicker.js"></script>
+    <script src="~/Scripts/nouislider.min.js"></script>
+    <script src="~/Scripts/bootstrap-tagsinput.js"></script>
+    <script src="~/Scripts/bootstrap-selectpicker.js"></script>
+    <script src="~/Scripts/jasny-bootstrap.min.js"></script>
+    <script src="~/Scripts/modernizr.js"></script>
+    <script src="~/Scripts/material-kit.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.sharrre.js"></script>
+</body>
+
+<!--Modals-->
+<div id="LogModal" class="modal fade" tabindex="-1" role="dialog" data-keyboard="false">
+    <div class="modal-dialog modal-login" role="document">
+        <!-- Modal content-->
+        <div class="modal-content modal-lg">
+
+            @Html.Partial("_LoginNew", new UserInfoViewModel.LoginMod())
+
+        </div>
+    </div>
+</div>
+
+<div id="RegisModal" class="modal fade" role="dialog" data-keyboard="false">
+    <div class="modal-dialog modal-login" role="document">
+        <!-- Modal content-->
+        <div class="modal-content modal-lg">
+
+            @Html.Partial("_RegisterNew", new UserInfoViewModel.RegisterMod())
+
+        </div>
+    </div>
+</div>
+
+
+</html>
